@@ -9,7 +9,7 @@ namespace Car
     internal class Car
     {
 
-        public string Brand;
+        public string Company;
         public string Color;
         public int HorsePower;
         public int Year;
