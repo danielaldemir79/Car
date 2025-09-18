@@ -9,8 +9,7 @@ namespace Car
 
 
 /*Lägg till ett fält för att hantera bilens motortyp, bensin, diesel, hybrid eller el.Använd en enum för att sätta bilens motor typ.
-Lägg till en metod Honk() som skriver ut "Beep beep!".
-Lägg till en metod Fuel() som skriver ut vilken motortyp bilen har och vilken energikälla den tankas med.
+
 Lägg till en metod IsFasterThan(Car otherCar) som jämför hastigheten på två bilar och skriver ut vilken som är snabbast.*/
     internal class Car
     {
@@ -36,16 +35,16 @@ Lägg till en metod IsFasterThan(Car otherCar) som jämför hastigheten på två
             switch (EngineModel)
             {
                 case Motor.MotorType.Bensin:
-                    Console.WriteLine("Bilen har en bensinmotor och tankas med bensin.");
+                    Console.WriteLine($"Bilen {Company} har en bensinmotor och tankas med bensin.");
                     break;
                 case Motor.MotorType.Diesel:
-                    Console.WriteLine("Bilen har en dieselmotor och tankas med diesel.");
+                    Console.WriteLine($"Bilen {Company} har en dieselmotor och tankas med diesel.");
                     break;
                 case Motor.MotorType.Hybrid:
-                    Console.WriteLine("Bilen har en hybridmotor och tankas med både bensin och el.");
+                    Console.WriteLine($"Bilen {Company} har en hybridmotor och tankas med både bensin och el.");
                     break;
                 case Motor.MotorType.El:
-                    Console.WriteLine("Bilen har en elmotor och tankas med el.");
+                    Console.WriteLine($"Bilen {Company} har en elmotor och tankas med el.");
                     break;
                 default:
                     Console.WriteLine("Okänd motortyp.");
@@ -53,9 +52,35 @@ Lägg till en metod IsFasterThan(Car otherCar) som jämför hastigheten på två
             }
         }
 
-      
+        public void IsFasterThan(Car otherCar)
+        {
+            if (otherCar.Speed > Speed)
+            {
+                Console.WriteLine($"{otherCar.Company} is faste than {Company}");
+
+            }
+            else if (otherCar.Speed < Speed)
+            {
+                Console.WriteLine($"{Company} is faster than {otherCar.Company}");
+            }
+            else
+            {
+                Console.WriteLine($"{Company} and {otherCar.Company} have the same speed.");
+
+            }
 
 
-
+        }
+        public void ShowInfo()
+        {
+            Console.WriteLine($"Company: {Company}");
+            Console.WriteLine($"Color: {Color}");
+            Console.WriteLine($"HorsePower: {HorsePower}");
+            Console.WriteLine($"Year: {Year}");
+            Console.WriteLine($"Gear: {Gear}");
+            Console.WriteLine($"EngineOn: {EngineOn}");
+            Console.WriteLine($"Speed: {Speed}");
+            Console.WriteLine($"EngineModel: {EngineModel}");
+        }
     }
 }
