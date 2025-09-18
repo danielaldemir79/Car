@@ -12,8 +12,21 @@
             myCar.Year = 2024;
             myCar.Gear = 6;
             myCar.EngineOn = true;
+            myCar.EngineModel = Motor.MotorType.Hybrid;
 
-            Console.WriteLine($"Bilinfo. Modell: {myCar.Company} \nÅrsmodell: {myCar.Year} \nFärg:{myCar.Color} \nHästkrafter:{myCar.HorsePower} \nÄr motorn på: {myCar.EngineOn} \nVäxel: {myCar.Gear}");
+            Car yourCar = new Car();
+            yourCar.Company = "BMW X5";
+            yourCar.Color = "White";
+            yourCar.HorsePower = 400;
+            yourCar.Year = 2024;
+            yourCar.Gear = 6;
+            yourCar.EngineOn = true;
+            yourCar.EngineModel = Motor.MotorType.Hybrid;
+
+           
+
+            myCar.Honk();
+            myCar.Fuel();
         }
     }
 }
