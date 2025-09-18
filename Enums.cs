@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Car
 {
-    internal class Motor
+    internal class Enums
     {
         
         public enum MotorType

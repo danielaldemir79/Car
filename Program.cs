@@ -12,7 +12,7 @@
             myCar.Year = 2024;
             myCar.Gear = 6;
             myCar.EngineOn = true;
-            myCar.EngineModel = Motor.MotorType.Hybrid;
+            myCar.EngineModel = Enums.MotorType.Hybrid;
             myCar.Speed = 250;
 
             Car yourCar = new Car();
@@ -22,7 +22,7 @@
             yourCar.Year = 2024;
             yourCar.Gear = 6;
             yourCar.EngineOn = true;
-            yourCar.EngineModel = Motor.MotorType.Hybrid;
+            yourCar.EngineModel = Enums.MotorType.Hybrid;
             yourCar.Speed = 240;
 
             Console.WriteLine("CAR 1");

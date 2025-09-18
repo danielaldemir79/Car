@@ -7,10 +7,6 @@ using System.Threading.Tasks;
 namespace Car
 {
 
-
-/*Lägg till ett fält för att hantera bilens motortyp, bensin, diesel, hybrid eller el.Använd en enum för att sätta bilens motor typ.
-
-Lägg till en metod IsFasterThan(Car otherCar) som jämför hastigheten på två bilar och skriver ut vilken som är snabbast.*/
     internal class Car
     {
 
@@ -22,7 +18,7 @@ Lägg till en metod IsFasterThan(Car otherCar) som jämför hastigheten på två
         public bool EngineOn;
         public int Speed;
         
-        public Motor.MotorType EngineModel;
+        public Enums.MotorType EngineModel;
         
 
         public void Honk()
@@ -34,16 +30,16 @@ Lägg till en metod IsFasterThan(Car otherCar) som jämför hastigheten på två
         {
             switch (EngineModel)
             {
-                case Motor.MotorType.Bensin:
+                case Enums.MotorType.Bensin:
                     Console.WriteLine($"Bilen {Company} har en bensinmotor och tankas med bensin.");
                     break;
-                case Motor.MotorType.Diesel:
+                case Enums.MotorType.Diesel:
                     Console.WriteLine($"Bilen {Company} har en dieselmotor och tankas med diesel.");
                     break;
-                case Motor.MotorType.Hybrid:
+                case Enums.MotorType.Hybrid:
                     Console.WriteLine($"Bilen {Company} har en hybridmotor och tankas med både bensin och el.");
                     break;
-                case Motor.MotorType.El:
+                case Enums.MotorType.El:
                     Console.WriteLine($"Bilen {Company} har en elmotor och tankas med el.");
                     break;
                 default:
